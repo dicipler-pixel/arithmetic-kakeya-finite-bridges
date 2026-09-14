@@ -1,0 +1,41 @@
+name: Public arithmetic Kakeya proof supplement
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kakeya-public-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  proofs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned Lean and mathlib dependencies
+        shell: bash
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o /tmp/elan-init.sh
+          bash /tmp/elan-init.sh -y --default-toolchain "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          lake update
+          lake exe cache get Mathlib.Algebra.Ring.Rat Mathlib.Algebra.BigOperators.Ring.Finset Mathlib.Algebra.BigOperators.Pi Mathlib.Data.Int.Cast.Lemmas Mathlib.Algebra.BigOperators.Group.Finset.Basic Mathlib.Algebra.BigOperators.GroupWithZero.Action Mathlib.Algebra.Module.Prod Mathlib.LinearAlgebra.Prod Mathlib.Tactic.Ring Mathlib.Tactic.Push Mathlib.Tactic.NormNum
+      - name: Verify builds, kernels, declarations, and rejection controls
+        run: python3 scripts/verify_kakeya_public.py
+      - name: Upload public verification receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kakeya-public-${{ github.run_id }}-${{ github.sha }}
+          path: verification/kakeya_public/
+          if-no-files-found: warn
+          retention-days: 30
