@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use these Lean proofs, please cite them as below."
+title: "Arithmetic Kakeya: finite bridges in Lean"
+authors:
+  - family-names: "Beasley"
+    given-names: "Jeromie"
+version: 1.0.0
+date-released: 2026-09-14
+repository-code: "https://github.com/dicipler-pixel/arithmetic-kakeya-finite-bridges"
+references:
+  - type: software
+    title: "Certified Obstructions and Exact Forcing: Earth-Moon Graph Coloring and Arithmetic Kakeya"
+    authors:
+      - family-names: "Beasley"
+        given-names: "Jeromie"
+    doi: "10.5281/zenodo.22812168"
+keywords:
+  - Lean 4
+  - Mathlib
+  - arithmetic Kakeya
+  - formal verification
