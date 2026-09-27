@@ -8,7 +8,7 @@
 ![Lean](https://img.shields.io/badge/Lean-v4.33.0-blue)
 ![Theorems](https://img.shields.io/badge/theorems-33-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
-[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22812168-blue)](https://doi.org/10.5281/zenodo.22812168)
+[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22812167-blue)](https://doi.org/10.5281/zenodo.22812167)
 
 Jeromie Beasley
 
@@ -75,7 +75,7 @@ solved. The full scope note is in
 
 *Certified Obstructions and Exact Forcing: Earth–Moon Graph Coloring and
 Arithmetic Kakeya*, Jeromie Beasley, Version 2 (2026).
-DOI [10.5281/zenodo.22812168](https://doi.org/10.5281/zenodo.22812168).
+DOI [10.5281/zenodo.22812167](https://doi.org/10.5281/zenodo.22812167).
 Manuscript and full reproduction supplement:
 [earth-moon-kakeya-certificates](https://github.com/dicipler-pixel/earth-moon-kakeya-certificates).
 
