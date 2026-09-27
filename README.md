@@ -84,3 +84,7 @@ Manuscript and full reproduction supplement:
 Citation metadata is in [`CITATION.cff`](CITATION.cff). The code is a
 downstream project using Mathlib; it has not been accepted into upstream
 Mathlib.
+
+---
+
+Copyright (c) 2026 Jeromie Beasley. Code and proofs: [MIT](LICENSE). Written text: [CC BY 4.0](LICENSE-CC-BY-4.0.md). See [`LICENSING.md`](LICENSING.md).

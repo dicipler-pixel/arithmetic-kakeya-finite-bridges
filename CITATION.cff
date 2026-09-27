@@ -19,3 +19,6 @@ keywords:
   - Mathlib
   - arithmetic Kakeya
   - formal verification
+license:
+  - MIT
+  - CC-BY-4.0
