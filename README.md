@@ -6,7 +6,8 @@
 
 [![Lean proof check](https://github.com/dicipler-pixel/arithmetic-kakeya-finite-bridges/actions/workflows/kakeya-public.yml/badge.svg)](https://github.com/dicipler-pixel/arithmetic-kakeya-finite-bridges/actions/workflows/kakeya-public.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.33.0-blue)
-![Theorems](https://img.shields.io/badge/theorems-33-2EA043)
+[![Full library check](https://github.com/dicipler-pixel/arithmetic-kakeya-finite-bridges/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/arithmetic-kakeya-finite-bridges/actions/workflows/build.yml)
+![Theorems](https://img.shields.io/badge/theorems-127-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 [![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22812167-blue)](https://doi.org/10.5281/zenodo.22812167)
 
@@ -43,6 +44,29 @@ It is not sufficient to build one.
 | [`KakeyaAuditControls.lean`](OperatorFirst/KakeyaAuditControls.lean) | 3 | Proved counterexamples to two stronger statements the bridge must never be used for |
 | [`KakeyaCutAssumptionControl.lean`](OperatorFirst/KakeyaCutAssumptionControl.lean) | 5 | Shows the admissibility hypothesis cannot be dropped |
 | | **33** | |
+
+## The wider library: forcing, the Figure 3 family, and Earth–Moon
+
+Nine more modules, 94 theorems, carry the rest of the paper's finite mathematics. They were
+first checked in the research repository and are copied here byte for byte.
+
+| File | Theorems | What it does |
+| :--- | :-: | :--- |
+| [`KakeyaCut.lean`](OperatorFirst/KakeyaCut.lean) | 9 | The column-sum mechanism of the cut theorem: restriction, internal cancellation, the rank-one obstruction |
+| [`KakeyaForcingLinear.lean`](OperatorFirst/KakeyaForcingLinear.lean) | 10 | Exact forcing criteria: forcing iff the kernel is not contained in the target's, dual certificates, presentation invariance, the projector test |
+| [`KakeyaSeedingControl.lean`](OperatorFirst/KakeyaSeedingControl.lean) | 11 | A complete forcing sequence on the paper's own Figure 3 that refutes the seeding lemma as first stated |
+| [`KakeyaAtlasFamily.lean`](OperatorFirst/KakeyaAtlasFamily.lean) | 18 | The Figure 3 family with edge label `(1, q)`: it completes exactly at `q = 2`, with score `7/4` |
+| [`KakeyaAtlasProjector.lean`](OperatorFirst/KakeyaAtlasProjector.lean) | 16 | The exact rational rank-one projector `ccᵀ/13` onto the first forcing kernel at `q = 2` |
+| [`KakeyaExtension.lean`](OperatorFirst/KakeyaExtension.lean) | 5 | Products add density exactly, so a positive density eventually exceeds any bound |
+| [`AK_original.lean`](MixedIntake/AK_original.lean) | 7 | Score granularity (the `67/40` record and the `5/3` ceiling below denominator 40) and density additivity |
+| [`RestrictionBridge.lean`](OperatorFirst/RestrictionBridge.lean) | 5 | Restriction identities shared by both obstructions: internal flux cancels, capacity transfers |
+| [`EarthMoon.lean`](OperatorFirst/EarthMoon.lean) | 13 | `C₇[K₄]`: triangle-free joins, 112 join and 154 host edges, a proper 10-colouring, and the two-layer capacity obstruction with the planar Euler bounds as stated premises |
+| | **94** | |
+
+This wider library is checked by [a second workflow](.github/workflows/build.yml): every module
+builds against Lean v4.33.0 and Mathlib v4.33.0, is replayed in the kernel checker, and every
+theorem is axiom-audited; three false statements (an integer unit for 2, equal kernels for maps
+with equal range, 111 join edges) must be rejected.
 
 ## How it is checked
 

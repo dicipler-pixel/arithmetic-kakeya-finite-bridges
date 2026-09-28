@@ -9,3 +9,6 @@ rev = "v4.33.0"
 
 [[lean_lib]]
 name = "OperatorFirst"
+
+[[lean_lib]]
+name = "MixedIntake"

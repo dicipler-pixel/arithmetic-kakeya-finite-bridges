@@ -1,0 +1,78 @@
+{
+ "modules": [
+  {
+   "module": "OperatorFirst.KakeyaDenominators",
+   "path": "OperatorFirst/KakeyaDenominators.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaForcingBridge",
+   "path": "OperatorFirst/KakeyaForcingBridge.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaCutCompletion",
+   "path": "OperatorFirst/KakeyaCutCompletion.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaAuditControls",
+   "path": "OperatorFirst/KakeyaAuditControls.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaCutAssumptionControl",
+   "path": "OperatorFirst/KakeyaCutAssumptionControl.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaCut",
+   "path": "OperatorFirst/KakeyaCut.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaForcingLinear",
+   "path": "OperatorFirst/KakeyaForcingLinear.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaSeedingControl",
+   "path": "OperatorFirst/KakeyaSeedingControl.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaAtlasFamily",
+   "path": "OperatorFirst/KakeyaAtlasFamily.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaAtlasProjector",
+   "path": "OperatorFirst/KakeyaAtlasProjector.lean"
+  },
+  {
+   "module": "OperatorFirst.RestrictionBridge",
+   "path": "OperatorFirst/RestrictionBridge.lean"
+  },
+  {
+   "module": "OperatorFirst.EarthMoon",
+   "path": "OperatorFirst/EarthMoon.lean"
+  },
+  {
+   "module": "OperatorFirst.KakeyaExtension",
+   "path": "OperatorFirst/KakeyaExtension.lean"
+  },
+  {
+   "module": "MixedIntake.AK_original",
+   "path": "MixedIntake/AK_original.lean"
+  }
+ ],
+ "expected_theorems": 127,
+ "expected_false_controls": 3,
+ "root_imports": [
+  "OperatorFirst.KakeyaDenominators",
+  "OperatorFirst.KakeyaForcingBridge",
+  "OperatorFirst.KakeyaCutCompletion",
+  "OperatorFirst.KakeyaAuditControls",
+  "OperatorFirst.KakeyaCutAssumptionControl",
+  "OperatorFirst.KakeyaCut",
+  "OperatorFirst.KakeyaForcingLinear",
+  "OperatorFirst.KakeyaSeedingControl",
+  "OperatorFirst.KakeyaAtlasFamily",
+  "OperatorFirst.KakeyaAtlasProjector",
+  "OperatorFirst.RestrictionBridge",
+  "OperatorFirst.EarthMoon",
+  "OperatorFirst.KakeyaExtension",
+  "MixedIntake.AK_original"
+ ]
+}
