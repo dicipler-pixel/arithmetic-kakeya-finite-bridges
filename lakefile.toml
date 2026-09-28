@@ -1,6 +1,6 @@
 name = "arithmetic-kakeya-finite-bridges"
 version = "0.1.0"
-defaultTargets = ["OperatorFirst"]
+defaultTargets = ["OperatorFirst", "MixedIntake"]
 
 [[require]]
 name = "mathlib"
@@ -9,6 +9,8 @@ rev = "v4.33.0"
 
 [[lean_lib]]
 name = "OperatorFirst"
+globs = ["OperatorFirst.+"]
 
 [[lean_lib]]
 name = "MixedIntake"
+globs = ["MixedIntake.+"]
