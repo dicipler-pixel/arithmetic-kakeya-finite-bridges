@@ -66,7 +66,7 @@ first checked in the research repository and are copied here byte for byte.
 This wider library is checked by [a second workflow](.github/workflows/build.yml): every module
 builds against Lean v4.33.0 and Mathlib v4.33.0, is replayed in the kernel checker, and every
 theorem is axiom-audited; three false statements (an integer unit for 2, equal kernels for maps
-with equal range, 111 join edges) must be rejected.
+with equal range, a host graph failing the Euler count) must be rejected.
 
 ## How it is checked
 
