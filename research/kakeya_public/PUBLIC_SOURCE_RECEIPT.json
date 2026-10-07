@@ -6,11 +6,12 @@
   },
   "scope": "Final proof sources and public verification machinery only. Development history and private research records are not included or identified.",
   "source_git_blobs": {
-    "OperatorFirst/KakeyaDenominators.lean": null,
-    "OperatorFirst/KakeyaCutCompletion.lean": null,
-    "OperatorFirst/KakeyaForcingBridge.lean": null,
-    "OperatorFirst/KakeyaAuditControls.lean": null,
-    "OperatorFirst/KakeyaCutAssumptionControl.lean": null,
-    "scripts/AuditKakeyaBridges.lean": null
-  }
+    "OperatorFirst/KakeyaDenominators.lean": "ad46c07b20d43f819e14c2c44572a551a1fd332a",
+    "OperatorFirst/KakeyaCutCompletion.lean": "b7907756a13750752ece1a8b445ac924f79e0baa",
+    "OperatorFirst/KakeyaForcingBridge.lean": "9251e68d75d646f72ed014ed1d4ea7693f667ea1",
+    "OperatorFirst/KakeyaAuditControls.lean": "be5ff0492fc614f3b5ec02f1b0ad4ba252377ec6",
+    "OperatorFirst/KakeyaCutAssumptionControl.lean": "163205e3f8218faf91d81c4fccfe882c8e1d4254",
+    "scripts/AuditKakeyaBridges.lean": "248f5c5de268ddc000ce492f631452b86790a876"
+  },
+  "source_git_blobs_note": "git blob ids (git hash-object) of the published files; each is byte-identical to its private source."
 }

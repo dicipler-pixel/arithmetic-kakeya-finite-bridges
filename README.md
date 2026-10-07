@@ -2,7 +2,7 @@
 
 # Arithmetic Kakeya — finite bridges in Lean
 
-**Two machine-checked bridges for the Epoch FrontierMath arithmetic Kakeya problem: rational forcing equals integer forcing, and every completed configuration leaves two independent labels on every cut.**
+**Two machine-checked bridges for the Epoch FrontierMath arithmetic Kakeya problem: rational forcing equals integer forcing, and every completed configuration leaves two independent surviving labels on every nonempty cut of initially unknown sites.**
 
 [![Lean proof check](https://github.com/dicipler-pixel/arithmetic-kakeya-finite-bridges/actions/workflows/kakeya-public.yml/badge.svg)](https://github.com/dicipler-pixel/arithmetic-kakeya-finite-bridges/actions/workflows/kakeya-public.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.33.0-blue)
@@ -22,7 +22,7 @@ Jeromie Beasley
 **1. Clearing denominators.** For a finite system of integer rows, a rational
 forcing witness exists exactly when an integer one does, with the same zero
 pattern and a nonzero multiple of the target `(1, −1)`. Rational row reduction
-can therefore be trusted to decide the challenge's integer forcing step.
+can therefore be trusted to decide the integer forcing step in the nonzero-multiple model.
 (`KakeyaDenominators.rational_integer_witness_iff`,
 `KakeyaForcingBridge.canForce_iff_stepZ`, `canForce_iff_stepQ`)
 
@@ -55,12 +55,12 @@ first checked in the research repository and are copied here byte for byte.
 | [`KakeyaCut.lean`](OperatorFirst/KakeyaCut.lean) | 9 | The column-sum mechanism of the cut theorem: restriction, internal cancellation, the rank-one obstruction |
 | [`KakeyaForcingLinear.lean`](OperatorFirst/KakeyaForcingLinear.lean) | 10 | Exact forcing criteria: forcing iff the kernel is not contained in the target's, dual certificates, presentation invariance, the projector test |
 | [`KakeyaSeedingControl.lean`](OperatorFirst/KakeyaSeedingControl.lean) | 11 | A complete forcing sequence on the paper's own Figure 3 that refutes the seeding lemma as first stated |
-| [`KakeyaAtlasFamily.lean`](OperatorFirst/KakeyaAtlasFamily.lean) | 18 | The Figure 3 family with edge label `(1, q)`: it completes exactly at `q = 2`, with score `7/4` |
+| [`KakeyaAtlasFamily.lean`](OperatorFirst/KakeyaAtlasFamily.lean) | 18 | The Figure 3 family with edge label `(1, q)`: it completes exactly at `q = 2`. Its score `7/4` is entered by hand; Lean checks only that arithmetic and `67/40 < 7/4` |
 | [`KakeyaAtlasProjector.lean`](OperatorFirst/KakeyaAtlasProjector.lean) | 16 | The exact rational rank-one projector `ccᵀ/13` onto the first forcing kernel at `q = 2` |
 | [`KakeyaExtension.lean`](OperatorFirst/KakeyaExtension.lean) | 5 | Products add density exactly, so a positive density eventually exceeds any bound |
 | [`AK_original.lean`](MixedIntake/AK_original.lean) | 7 | Score granularity (the `67/40` record and the `5/3` ceiling below denominator 40) and density additivity |
 | [`RestrictionBridge.lean`](OperatorFirst/RestrictionBridge.lean) | 5 | Restriction identities shared by both obstructions: internal flux cancels, capacity transfers |
-| [`EarthMoon.lean`](OperatorFirst/EarthMoon.lean) | 13 | `C₇[K₄]`: triangle-free joins, 112 join and 154 host edges, a proper 10-colouring, and the two-layer capacity obstruction with the planar Euler bounds as stated premises |
+| [`EarthMoon.lean`](OperatorFirst/EarthMoon.lean) | 13 | `C₇[K₄]`: triangle-free joins, 112 join and 154 host edges, a proper 10-colouring, and the two-layer capacity obstruction with the triangle-free planar Euler bound (`e ≤ 2N − 4` per layer) as a stated premise |
 | | **94** | |
 
 This wider library is checked by [a second workflow](.github/workflows/build.yml): every module
